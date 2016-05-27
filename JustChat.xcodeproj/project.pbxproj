@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		01D2000AC089C154423949A9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E36723CADD2721E513587945 /* libPods.a */; };
 		841346A71CF4375700A281C2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841346A61CF4375700A281C2 /* RegisterViewController.m */; };
+		8450448F1CF7E3B900F59869 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450448E1CF7E3B900F59869 /* MainTabBarController.m */; };
+		845044911CF7E3DE00F59869 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845044901CF7E3DE00F59869 /* TabBar.storyboard */; };
+		845044981CF7E83500F59869 /* contantsGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 845044961CF7E83500F59869 /* contantsGray.png */; };
+		845044991CF7E83500F59869 /* contants.png in Resources */ = {isa = PBXBuildFile; fileRef = 845044971CF7E83500F59869 /* contants.png */; };
+		8450449C1CF7E8B800F59869 /* messageGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 8450449A1CF7E8B800F59869 /* messageGray.png */; };
+		8450449D1CF7E8B800F59869 /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = 8450449B1CF7E8B800F59869 /* message.png */; };
+		845044A01CF7F16900F59869 /* MessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450449F1CF7F16900F59869 /* MessageTableViewController.m */; };
+		845044A31CF7F1B800F59869 /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845044A21CF7F1B800F59869 /* ContactsTableViewController.m */; };
 		8460F3061CF56BB10066587F /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8460F3051CF56BB10066587F /* Register.storyboard */; };
 		846602AB1CF579D400345633 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846602AA1CF579D400345633 /* Login.storyboard */; };
 		846602B01CF5955500345633 /* touxiang.png in Resources */ = {isa = PBXBuildFile; fileRef = 846602AF1CF5955500345633 /* touxiang.png */; };
@@ -53,6 +61,17 @@
 		54776D13C36AF3A1D23ECAC7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		841346A51CF4375700A281C2 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		841346A61CF4375700A281C2 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		8450448D1CF7E3B900F59869 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		8450448E1CF7E3B900F59869 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		845044901CF7E3DE00F59869 /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		845044961CF7E83500F59869 /* contantsGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contantsGray.png; sourceTree = "<group>"; };
+		845044971CF7E83500F59869 /* contants.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contants.png; sourceTree = "<group>"; };
+		8450449A1CF7E8B800F59869 /* messageGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageGray.png; sourceTree = "<group>"; };
+		8450449B1CF7E8B800F59869 /* message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message.png; sourceTree = "<group>"; };
+		8450449E1CF7F16900F59869 /* MessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewController.h; sourceTree = "<group>"; };
+		8450449F1CF7F16900F59869 /* MessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewController.m; sourceTree = "<group>"; };
+		845044A11CF7F1B800F59869 /* ContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
+		845044A21CF7F1B800F59869 /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
 		8460F3051CF56BB10066587F /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		846602AA1CF579D400345633 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		846602AF1CF5955500345633 /* touxiang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touxiang.png; sourceTree = "<group>"; };
@@ -150,6 +169,10 @@
 		846602AE1CF5954E00345633 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				8450449A1CF7E8B800F59869 /* messageGray.png */,
+				8450449B1CF7E8B800F59869 /* message.png */,
+				845044961CF7E83500F59869 /* contantsGray.png */,
+				845044971CF7E83500F59869 /* contants.png */,
 				846602AF1CF5955500345633 /* touxiang.png */,
 			);
 			path = resource;
@@ -187,8 +210,15 @@
 				84D4BE471CF2F6A3008B580B /* LoginViewController.m */,
 				841346A51CF4375700A281C2 /* RegisterViewController.h */,
 				841346A61CF4375700A281C2 /* RegisterViewController.m */,
+				8450448D1CF7E3B900F59869 /* MainTabBarController.h */,
+				8450448E1CF7E3B900F59869 /* MainTabBarController.m */,
+				8450449E1CF7F16900F59869 /* MessageTableViewController.h */,
+				8450449F1CF7F16900F59869 /* MessageTableViewController.m */,
+				845044A11CF7F1B800F59869 /* ContactsTableViewController.h */,
+				845044A21CF7F1B800F59869 /* ContactsTableViewController.m */,
 				8460F3051CF56BB10066587F /* Register.storyboard */,
 				846602AA1CF579D400345633 /* Login.storyboard */,
+				845044901CF7E3DE00F59869 /* TabBar.storyboard */,
 				84D4BE4C1CF2F6A3008B580B /* Assets.xcassets */,
 				84D4BE4E1CF2F6A3008B580B /* LaunchScreen.storyboard */,
 				84D4BE511CF2F6A3008B580B /* Info.plist */,
@@ -333,7 +363,12 @@
 				84D4BE501CF2F6A3008B580B /* LaunchScreen.storyboard in Resources */,
 				84D4BE4D1CF2F6A3008B580B /* Assets.xcassets in Resources */,
 				8460F3061CF56BB10066587F /* Register.storyboard in Resources */,
+				845044911CF7E3DE00F59869 /* TabBar.storyboard in Resources */,
+				845044981CF7E83500F59869 /* contantsGray.png in Resources */,
 				846602B01CF5955500345633 /* touxiang.png in Resources */,
+				845044991CF7E83500F59869 /* contants.png in Resources */,
+				8450449C1CF7E8B800F59869 /* messageGray.png in Resources */,
+				8450449D1CF7E8B800F59869 /* message.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,9 +442,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D4BE481CF2F6A3008B580B /* LoginViewController.m in Sources */,
+				845044A31CF7F1B800F59869 /* ContactsTableViewController.m in Sources */,
+				8450448F1CF7E3B900F59869 /* MainTabBarController.m in Sources */,
 				84D4BE451CF2F6A3008B580B /* AppDelegate.m in Sources */,
 				84D4BE421CF2F6A3008B580B /* main.m in Sources */,
 				841346A71CF4375700A281C2 /* RegisterViewController.m in Sources */,
+				845044A01CF7F16900F59869 /* MessageTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "EMSDK.h"
 #import "RegisterViewController.h"
+#import "MainTabBarController.h"
 @interface LoginViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *usernameTF;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTF;
@@ -43,6 +44,9 @@
     if (error == nil) {
         NSLog(@"登录成功！");
         altC.title = @"登录成功";
+        MainTabBarController *mTBC = [[UIStoryboard storyboardWithName:@"TabBar" bundle:nil]instantiateViewControllerWithIdentifier:@"tab"];
+        mTBC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [self.navigationController presentViewController:mTBC animated:YES completion:nil];
     }else{
         altC.title = @"登录失败";
         switch (error.code) {
