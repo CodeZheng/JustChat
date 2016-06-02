@@ -9,6 +9,9 @@
 #import "MessageTableViewController.h"
 #import "EMClient.h"
 #import "EMChatManagerDelegate.h"
+#import "MessageTableViewCell.h"
+#import "NSDate+FromString.h"
+#import "ChatViewController.h"
 @interface MessageTableViewController ()<EMChatManagerDelegate>
 @property (nonatomic, strong) NSMutableArray *conversationsArr;
 @end
@@ -19,6 +22,9 @@
         self.conversationsArr = [NSMutableArray arrayWithCapacity:0];
     }
     return _conversationsArr;
+}
+- (void)viewWillAppear:(BOOL)animated{
+    self.tabBarController.tabBar.hidden=NO;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,6 +38,7 @@
 }
 
 - (void)didReceiveMessages:(NSArray *)aMessages{
+    self.conversationsArr = [[[EMClient sharedClient].chatManager getAllConversations]mutableCopy];
     [self.tableView reloadData];
 }
 
@@ -53,39 +60,68 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"messageCell" forIndexPath:indexPath];
+    MessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"messageCell" forIndexPath:indexPath];
     EMConversation *conversation = self.conversationsArr[indexPath.row];
-    EMTextMessageBody *mb = (EMTextMessageBody *)conversation.latestMessage.body;
-    cell.textLabel.text = mb.text;
-    cell.imageView.image = [UIImage imageNamed:@"touxiang"];
+    EMMessageBody *mb = conversation.latestMessage.body;
+    if (mb.type == EMMessageBodyTypeText) {
+        EMTextMessageBody *body = (EMTextMessageBody *)mb;
+        cell.lastMessageLabel.text = body.text;
+    }else if (mb.type == EMMessageBodyTypeImage){
+        cell.lastMessageLabel.text = @"[图片]";
+    }else if (mb.type == EMMessageBodyTypeLocation){
+        cell.lastMessageLabel.text = @"[位置]";
+    }else if (mb.type == EMMessageBodyTypeVideo){
+        cell.lastMessageLabel.text = @"[视频]";
+    }else if (mb.type == EMMessageBodyTypeFile){
+        cell.lastMessageLabel.text = @"[文件]";
+    }else if (mb.type == EMMessageBodyTypeVoice){
+        cell.lastMessageLabel.text = @"[语音]";
+    }
+    
+    cell.friendNameLabel.text = conversation.latestMessage.from;
+    cell.timeMessageLabel.text = [NSDate convertDateFromDate:[NSDate dateWithTimeIntervalSince1970:conversation.latestMessage.timestamp/1000]];
+    cell.headImageV.image = [UIImage imageNamed:@"touxiang"];
     // Configure the cell...
     
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    self.hidesBottomBarWhenPushed = YES;
+    ChatViewController *cVC = [[UIStoryboard storyboardWithName:@"Chat" bundle:nil]instantiateViewControllerWithIdentifier:@"cc"];
+    [self.navigationController pushViewController:cVC animated:YES];
+    EMConversation *conversation = self.conversationsArr[indexPath.row];
+    cVC.title = conversation.latestMessage.from;
+//    self.hidesBottomBarWhenPushed = NO;
 }
 
-/*
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 70;
+}
+
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        [self.conversationsArr removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return @"删除";
+}
 
 /*
 // Override to support rearranging the table view.

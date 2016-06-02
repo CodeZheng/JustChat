@@ -29,10 +29,13 @@
 - (IBAction)registerAction:(id)sender {
     EMError *error = [[EMClient sharedClient]registerWithUsername:self.usernameTF.text password:self.pwdTF.text];
     UIAlertController *altC = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleAlert];
-    [altC addAction:[UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleCancel handler:nil]];
+    
     if (error == nil) {
         NSLog(@"注册成功！");
         altC.title = @"注册成功！";
+        [altC addAction:[UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }]];
     }else{
         NSLog(@"注册失败");
         altC.title = @"注册失败！";
@@ -45,6 +48,7 @@
             default:
                 break;
         }
+        [altC addAction:[UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleCancel handler:nil]];
     }
     [self presentViewController:altC animated:YES completion:nil];
 

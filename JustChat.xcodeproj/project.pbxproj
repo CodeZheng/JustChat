@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		01D2000AC089C154423949A9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E36723CADD2721E513587945 /* libPods.a */; };
 		841346A71CF4375700A281C2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841346A61CF4375700A281C2 /* RegisterViewController.m */; };
+		844014D71CFBE2D9001D9134 /* selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 844014D51CFBE2D9001D9134 /* selected.png */; };
+		844014D81CFBE2D9001D9134 /* unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 844014D61CFBE2D9001D9134 /* unselected.png */; };
+		844014DB1CFC0051001D9134 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844014DA1CFC0051001D9134 /* MessageTableViewCell.m */; };
+		844014DF1CFC169F001D9134 /* NSDate+FromString.m in Sources */ = {isa = PBXBuildFile; fileRef = 844014DE1CFC169F001D9134 /* NSDate+FromString.m */; };
+		844014E11CFC322F001D9134 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844014E01CFC322F001D9134 /* Chat.storyboard */; };
+		844014E41CFC384D001D9134 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844014E31CFC384D001D9134 /* ChatViewController.m */; };
+		844F1F801CFD32D40032B0B3 /* MyMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F1F7F1CFD32D40032B0B3 /* MyMessageTableViewCell.m */; };
+		844F1F831CFD33170032B0B3 /* OtherMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F1F821CFD33170032B0B3 /* OtherMessageTableViewCell.m */; };
 		8450448F1CF7E3B900F59869 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450448E1CF7E3B900F59869 /* MainTabBarController.m */; };
 		845044911CF7E3DE00F59869 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845044901CF7E3DE00F59869 /* TabBar.storyboard */; };
 		845044981CF7E83500F59869 /* contantsGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 845044961CF7E83500F59869 /* contantsGray.png */; };
@@ -61,6 +69,19 @@
 		54776D13C36AF3A1D23ECAC7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		841346A51CF4375700A281C2 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		841346A61CF4375700A281C2 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		844014D51CFBE2D9001D9134 /* selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected.png; sourceTree = "<group>"; };
+		844014D61CFBE2D9001D9134 /* unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unselected.png; sourceTree = "<group>"; };
+		844014D91CFC0051001D9134 /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageTableViewCell.h; path = ../MessageTableViewCell.h; sourceTree = "<group>"; };
+		844014DA1CFC0051001D9134 /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageTableViewCell.m; path = ../MessageTableViewCell.m; sourceTree = "<group>"; };
+		844014DD1CFC169F001D9134 /* NSDate+FromString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+FromString.h"; sourceTree = "<group>"; };
+		844014DE1CFC169F001D9134 /* NSDate+FromString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FromString.m"; sourceTree = "<group>"; };
+		844014E01CFC322F001D9134 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		844014E21CFC384D001D9134 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		844014E31CFC384D001D9134 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		844F1F7E1CFD32D40032B0B3 /* MyMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMessageTableViewCell.h; sourceTree = "<group>"; };
+		844F1F7F1CFD32D40032B0B3 /* MyMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMessageTableViewCell.m; sourceTree = "<group>"; };
+		844F1F811CFD33170032B0B3 /* OtherMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherMessageTableViewCell.h; sourceTree = "<group>"; };
+		844F1F821CFD33170032B0B3 /* OtherMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherMessageTableViewCell.m; sourceTree = "<group>"; };
 		8450448D1CF7E3B900F59869 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		8450448E1CF7E3B900F59869 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		845044901CF7E3DE00F59869 /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -166,22 +187,48 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		846602AE1CF5954E00345633 /* resource */ = {
+		844014DC1CFC168C001D9134 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				844014DD1CFC169F001D9134 /* NSDate+FromString.h */,
+				844014DE1CFC169F001D9134 /* NSDate+FromString.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		844F1F7D1CFD2DA90032B0B3 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				844014D91CFC0051001D9134 /* MessageTableViewCell.h */,
+				844014DA1CFC0051001D9134 /* MessageTableViewCell.m */,
+				844F1F7E1CFD32D40032B0B3 /* MyMessageTableViewCell.h */,
+				844F1F7F1CFD32D40032B0B3 /* MyMessageTableViewCell.m */,
+				844F1F811CFD33170032B0B3 /* OtherMessageTableViewCell.h */,
+				844F1F821CFD33170032B0B3 /* OtherMessageTableViewCell.m */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		846602AE1CF5954E00345633 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				844014D51CFBE2D9001D9134 /* selected.png */,
+				844014D61CFBE2D9001D9134 /* unselected.png */,
 				8450449A1CF7E8B800F59869 /* messageGray.png */,
 				8450449B1CF7E8B800F59869 /* message.png */,
 				845044961CF7E83500F59869 /* contantsGray.png */,
 				845044971CF7E83500F59869 /* contants.png */,
 				846602AF1CF5955500345633 /* touxiang.png */,
 			);
+			name = Resource;
 			path = resource;
 			sourceTree = "<group>";
 		};
 		84D4BE341CF2F6A2008B580B = {
 			isa = PBXGroup;
 			children = (
-				846602AE1CF5954E00345633 /* resource */,
+				844014DC1CFC168C001D9134 /* Category */,
+				846602AE1CF5954E00345633 /* Resource */,
 				84D4BE3F1CF2F6A3008B580B /* JustChat */,
 				84D4BE591CF2F6A3008B580B /* JustChatTests */,
 				84D4BE641CF2F6A3008B580B /* JustChatUITests */,
@@ -204,6 +251,7 @@
 		84D4BE3F1CF2F6A3008B580B /* JustChat */ = {
 			isa = PBXGroup;
 			children = (
+				844F1F7D1CFD2DA90032B0B3 /* TableViewCell */,
 				84D4BE431CF2F6A3008B580B /* AppDelegate.h */,
 				84D4BE441CF2F6A3008B580B /* AppDelegate.m */,
 				84D4BE461CF2F6A3008B580B /* LoginViewController.h */,
@@ -216,9 +264,12 @@
 				8450449F1CF7F16900F59869 /* MessageTableViewController.m */,
 				845044A11CF7F1B800F59869 /* ContactsTableViewController.h */,
 				845044A21CF7F1B800F59869 /* ContactsTableViewController.m */,
+				844014E21CFC384D001D9134 /* ChatViewController.h */,
+				844014E31CFC384D001D9134 /* ChatViewController.m */,
 				8460F3051CF56BB10066587F /* Register.storyboard */,
 				846602AA1CF579D400345633 /* Login.storyboard */,
 				845044901CF7E3DE00F59869 /* TabBar.storyboard */,
+				844014E01CFC322F001D9134 /* Chat.storyboard */,
 				84D4BE4C1CF2F6A3008B580B /* Assets.xcassets */,
 				84D4BE4E1CF2F6A3008B580B /* LaunchScreen.storyboard */,
 				84D4BE511CF2F6A3008B580B /* Info.plist */,
@@ -363,7 +414,10 @@
 				84D4BE501CF2F6A3008B580B /* LaunchScreen.storyboard in Resources */,
 				84D4BE4D1CF2F6A3008B580B /* Assets.xcassets in Resources */,
 				8460F3061CF56BB10066587F /* Register.storyboard in Resources */,
+				844014E11CFC322F001D9134 /* Chat.storyboard in Resources */,
 				845044911CF7E3DE00F59869 /* TabBar.storyboard in Resources */,
+				844014D81CFBE2D9001D9134 /* unselected.png in Resources */,
+				844014D71CFBE2D9001D9134 /* selected.png in Resources */,
 				845044981CF7E83500F59869 /* contantsGray.png in Resources */,
 				846602B01CF5955500345633 /* touxiang.png in Resources */,
 				845044991CF7E83500F59869 /* contants.png in Resources */,
@@ -442,6 +496,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D4BE481CF2F6A3008B580B /* LoginViewController.m in Sources */,
+				844014DB1CFC0051001D9134 /* MessageTableViewCell.m in Sources */,
+				844014E41CFC384D001D9134 /* ChatViewController.m in Sources */,
+				844F1F801CFD32D40032B0B3 /* MyMessageTableViewCell.m in Sources */,
+				844F1F831CFD33170032B0B3 /* OtherMessageTableViewCell.m in Sources */,
+				844014DF1CFC169F001D9134 /* NSDate+FromString.m in Sources */,
 				845044A31CF7F1B800F59869 /* ContactsTableViewController.m in Sources */,
 				8450448F1CF7E3B900F59869 /* MainTabBarController.m in Sources */,
 				84D4BE451CF2F6A3008B580B /* AppDelegate.m in Sources */,
