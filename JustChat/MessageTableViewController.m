@@ -89,9 +89,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //    self.hidesBottomBarWhenPushed = YES;
     ChatViewController *cVC = [[UIStoryboard storyboardWithName:@"Chat" bundle:nil]instantiateViewControllerWithIdentifier:@"cc"];
-    [self.navigationController pushViewController:cVC animated:YES];
     EMConversation *conversation = self.conversationsArr[indexPath.row];
+    cVC.conversationID = conversation.conversationId;
     cVC.title = conversation.latestMessage.from;
+    [self.navigationController pushViewController:cVC animated:YES];
+    
 //    self.hidesBottomBarWhenPushed = NO;
 }
 

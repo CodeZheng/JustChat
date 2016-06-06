@@ -41,8 +41,16 @@
     self.tabBarController.tabBar.hidden=YES;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    [[EMClient sharedClient].chatManager removeDelegate:self];
     [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
     // Do any additional setup after loading the view.
+    EMConversation *conversation = [[EMClient sharedClient].chatManager getConversation:self.conversationID type:EMConversationTypeChat createIfNotExist:YES];
+    [conversation markAllMessagesAsRead];
+    NSDate *date = [NSDate date];
+    NSArray *arr = [NSArray array];
+    arr = [conversation loadMoreMessagesFrom:[[NSDate dateWithTimeInterval:-24*60*60 sinceDate:[NSDate date]] timeIntervalSince1970]*1000 + 1 to:[[NSDate date] timeIntervalSince1970]*1000 + 1 maxCount:10000];
+    [self.messageArr addObjectsFromArray:arr];
+    NSLog(@"%lu---%f",(unsigned long)arr.count,[date timeIntervalSince1970]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -159,7 +167,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     CGFloat f = [self.cellHeightDic[indexPath] floatValue];
     NSLog(@"cellheight:%f",f);
-    return f;
+    return f < 75 ? 75 : f;
 }
 /*
 #pragma mark - Navigation

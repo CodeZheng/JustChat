@@ -27,7 +27,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jzg-aK-c7J">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jzg-aK-c7J">
                                 <rect key="frame" x="5" y="25" width="590" height="535"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -57,7 +57,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXR-xK-SBG">
-                                                    <rect key="frame" x="60" y="25" width="403" height="72"/>
+                                                    <rect key="frame" x="60" y="25" width="403" height="46"/>
                                                     <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="1aD-Cy-EGt"/>
@@ -87,6 +87,7 @@
                                                 <constraint firstItem="aXR-xK-SBG" firstAttribute="width" relation="lessThanOrEqual" secondItem="Gsh-SJ-w3V" secondAttribute="width" multiplier="0.7" id="WGd-ob-6tf"/>
                                                 <constraint firstAttribute="bottom" secondItem="aXR-xK-SBG" secondAttribute="bottom" constant="5" id="Ycw-Mq-CCE"/>
                                                 <constraint firstItem="SQM-di-hKz" firstAttribute="leading" secondItem="Gsh-SJ-w3V" secondAttribute="leading" constant="5" id="ZCd-fr-pa2"/>
+                                                <constraint firstAttribute="bottom" secondItem="aXR-xK-SBG" secondAttribute="bottom" constant="5" id="eCz-40-BgN"/>
                                                 <constraint firstAttribute="trailing" secondItem="aXR-xK-SBG" secondAttribute="trailing" constant="5" id="fqz-W1-QGG"/>
                                                 <constraint firstItem="aFy-YJ-PnJ" firstAttribute="centerX" secondItem="Gsh-SJ-w3V" secondAttribute="centerX" id="hUK-tM-ylQ"/>
                                                 <constraint firstItem="aXR-xK-SBG" firstAttribute="top" secondItem="SQM-di-hKz" secondAttribute="top" id="nwc-G7-4uV"/>

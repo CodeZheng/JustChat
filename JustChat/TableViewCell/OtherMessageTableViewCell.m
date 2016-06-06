@@ -17,7 +17,7 @@
 - (CGFloat)setFrameOfCurrentCell:(NSString *)text{
     CGRect frame = [text boundingRectWithSize:CGSizeMake(self.contentView.bounds.size.width/2, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil];
    
-    return self.oMLabel.frame.origin.y+frame.size.height+25;
+    return self.oMLabel.frame.origin.y+frame.size.height+5;
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
